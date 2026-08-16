@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAK PMS Tours & Travels</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:#fff;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(0,0,0,.8);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #d9ad3c44;
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:16px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:23px;
+    font-weight:900;
+    color:#f5c542;
+}
+
+.logo span{
+    color:#fff;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#f5c542;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.9),
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.9)
+    ),
+    url("bus4.jpeg") center/cover no-repeat;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        transparent 65%,
+        #050505
+    );
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+}
+
+.hero small{
+    color:#f5c542;
+    font-size:16px;
+    letter-spacing:5px;
+}
+
+.hero h1{
+    font-size:clamp(50px,10vw,100px);
+    color:#f5c542;
+    margin:12px 0;
+    letter-spacing:5px;
+}
+
+.hero h2{
+    font-size:clamp(25px,5vw,45px);
+}
+
+.hero p{
+    color:#ddd;
+    font-size:18px;
+    margin:18px 0 28px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 28px;
+    border-radius:30px;
+    background:#f5c542;
+    color:#000;
+    text-decoration:none;
+    font-weight:900;
+    border:0;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px #f5c54255;
+}
+
+.btn-outline{
+    background:transparent;
+    border:2px solid #f5c542;
+    color:#f5c542;
+    margin-left:8px;
+}
+
+/* COMMON */
+
+section{
+    padding:90px 20px;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.title h2{
+    color:#f5c542;
+    font-size:42px;
+}
+
+.title p{
+    color:#888;
+    margin-top:10px;
+}
+
+/* BUS SECTION */
+
+.bus-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.bus-card{
+    background:#111;
+    border:1px solid #2a2a2a;
+    border-radius:22px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.bus-card:hover{
+    transform:translateY(-10px);
+    border-color:#f5c542;
+    box-shadow:0 20px 50px #000;
+}
+
+.bus-photo{
+    position:relative;
+    height:280px;
+    overflow:hidden;
+}
+
+.bus-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.bus-card:hover img{
+    transform:scale(1.08);
+}
+
+.bus-number{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#f5c542;
+    color:#000;
+    padding:8px 13px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.bus-info{
+    padding:22px;
+}
+
+.bus-info h3{
+    color:#f5c542;
+    font-size:22px;
+}
+
+.bus-info p{
+    color:#999;
+    line-height:1.6;
+    margin:12px 0;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin:15px 0;
+}
+
+.tag{
+    background:#222;
+    color:#f5c542;
+    padding:7px 10px;
+    border-radius:8px;
+    font-size:12px;
+}
+
+/* DESTINATIONS */
+
+.destination-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.destination{
+    height:230px;
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+    background-size:cover;
+    background-position:center;
+    transition:.3s;
+}
+
+.destination:hover{
+    transform:scale(1.03);
+}
+
+.destination::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.9)
+    );
+}
+
+.destination-info{
+    position:absolute;
+    z-index:2;
+    bottom:20px;
+    left:20px;
+}
+
+.destination-info h3{
+    color:#f5c542;
+    font-size:25px;
+}
+
+.destination-info p{
+    color:#ddd;
+    margin-top:5px;
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.feature{
+    padding:30px;
+    text-align:center;
+    background:#111;
+    border:1px solid #222;
+    border-radius:20px;
+}
+
+.feature-icon{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.feature h3{
+    color:#f5c542;
+    margin-bottom:10px;
+}
+
+.feature p{
+    color:#888;
+    line-height:1.6;
+}
+
+/* BOOKING */
+
+.booking-section{
+    background:
+    radial-gradient(circle at top,#241d08,#050505 60%);
+}
+
+.booking-box{
+    max-width:700px;
+    margin:auto;
+    padding:30px;
+    background:#0d0d0d;
+    border:1px solid #f5c54255;
+    border-radius:25px;
+}
+
+.selected{
+    background:#181818;
+    border:1px solid #f5c542;
+    color:#f5c542;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.booking-box input,
+.booking-box select,
+.booking-box textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:13px;
+    background:#191919;
+    border:1px solid #333;
+    color:white;
+    border-radius:11px;
+    outline:none;
+}
+
+.booking-box textarea{
+    height:100px;
+    resize:none;
+}
+
+.whatsapp{
+    width:100%;
+    background:#20c76a;
+    color:#fff;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+    background:#090909;
+}
+
+.phone{
+    font-size:clamp(30px,7vw,60px);
+    color:#f5c542;
+    font-weight:900;
+    margin:25px 0;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#020202;
+    color:#777;
+}
+
+footer strong{
+    color:#f5c542;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    nav a{
+        display:none;
+    }
+
+    .bus-grid,
+    .destination-grid,
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        min-height:90vh;
+    }
+
+    .hero h1{
+        letter-spacing:2px;
+    }
+
+    section{
+        padding:65px 15px;
+    }
+
+    .btn{
+        margin:5px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+<div class="nav">
+
+<div class="logo">
+PAK PMS <span>TOURS</span>
+</div>
+
+<div>
+<a href="#home">Home</a>
+<a href="#buses">Buses</a>
+<a href="#places">Places</a>
+<a href="#booking">Booking</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<small>HANUMANTHIRTHAM</small>
+
+<h1>PAK PMS</h1>
+
+<h2>TOURS & TRAVELS</h2>
+
+<p>
+Explore Tamil Nadu with comfort, safety and style.
+</p>
+
+<a href="#buses" class="btn">
+🚌 VIEW BUSES
+</a>
+
+<a href="#booking" class="btn btn-outline">
+BOOK YOUR TRIP
+</a>
+
+</div>
+
+</section>
+
+
+<!-- BUSES -->
+
+<section id="buses">
+
+<div class="container">
+
+<div class="title">
+
+<h2>Our Tourist Buses</h2>
+
+<p>
+Choose your favourite bus and book your trip
+</p>
+
+</div>
+
+
+<div class="bus-grid">
+
+
+<!-- BUS 1 -->
+
+<div class="bus-card">
+
+<div class="bus-photo">
+
+<img src="bus1.jpeg"
+alt="PAK PMS Tourist Bus">
+
+<div class="bus-number">
+BUS 01
+</div>
+
+</div>
+
+<div class="bus-info">
+
+<h3>PAK PMS Tourist Bus</h3>
+
+<p>
+Premium tourist bus for family and group trips.
+</p>
+
+<div class="tags">
+
+<span class="tag">❄️ Non-AC</span>
+<span class="tag">💺 Pushback</span>
+<span class="tag">📍 GPS</span>
+<span class="tag">🎵 Music</span>
+
+</div>
+
+<button
+class="btn"
+onclick="chooseBus('PAK PMS Tourist Bus 01')">
+
+BOOK THIS BUS
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- BUS 2 -->
+
+<div class="bus-card">
+
+<div class="bus-photo">
+
+<img src="bus2.jpeg"
+alt="PAK PMS Luxury Bus">
+
+<div class="bus-number">
+BUS 02
+</div>
+
+</div>
+
+<div class="bus-info">
+
+<h3>PAK PMS Luxury</h3>
+
+<p>
+Comfortable luxury bus for long-distance tours.
+</p>
+
+<div class="tags">
+
+
+<span class="tag">❄️ Non-AC</span>
+<span class="tag">💺 Luxury</span>
+<span class="tag">📍 GPS</span>
+<span class="tag">🔌 Charging</span>
+
+</div>
+
+<button
+class="btn"
+onclick="chooseBus('PAK PMS Luxury Bus 02')">
+
+BOOK THIS BUS
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- BUS 3 -->
+
+<div class="bus-card">
+
+<div class="bus-photo">
+
+<img src="bus3.jpeg"
+alt="PAK PMS Premium Bus">
+
+<div class="bus-number">
+BUS 03
+</div>
+
+</div>
+
+<div class="bus-info">
+
+<h3>PAK PMS Premium</h3>
+
+<p>
+Best choice for family, friends and group tours.
+</p>
+
+<div class="tags">
+
+<span class="tag">❄️ non-Ac</span>
+<span class="tag">💺 Comfortable</span>
+<span class="tag">📍 GPS</span>
+<span class="tag">🎵 Music</span>
+
+</div>
+
+<button
+class="btn"
+onclick="chooseBus('PAK PMS Premium Bus 03')">
+
+BOOK THIS BUS
+
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PLACES -->
+
+<section id="places">
+
+<div class="container">
+
+<div class="title">
+
+<h2>Explore Tamil Nadu</h2>
+
+<p>
+Plan your next unforgettable trip
+</p>
+
+</div>
+
+
+<div class="destination-grid">
+
+
+<div class="destination"
+style="background-image:url('https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=900&q=80')">
+
+<div class="destination-info">
+
+<h3>Ooty</h3>
+<p>Queen of Hills</p>
+
+</div>
+
+</div>
+
+
+<div class="destination"
+style="background-image:url('https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=900&q=80')">
+
+<div class="destination-info">
+
+<h3>Kodaikanal</h3>
+<p>Princess of Hills</p>
+
+</div>
+
+</div>
+
+
+<div class="destination"
+style="background-image:url('https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=80')">
+
+<div class="destination-info">
+
+<h3>Kanyakumari</h3>
+<p>Three Seas Meet</p>
+
+</div>
+
+</div>
+
+
+<div class="destination"
+style="background-image:url('https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=900&q=80')">
+
+<div class="destination-info">
+
+<h3>Madurai</h3>
+<p>Temple City</p>
+
+</div>
+
+</div>
+
+
+<div class="destination"
+style="background-image:url('https://images.unsplash.com/photo-1600100397608-f0109b3b9a4c?auto=format&fit=crop&w=900&q=80')">
+
+<div class="destination-info">
+
+<h3>Rameswaram</h3>
+<p>Temple & Beach</p>
+
+</div>
+
+</div>
+
+
+<div class="destination"
+style="background-image:url('https://images.unsplash.com/photo-1623668637901-9e3c7f8c0c58?auto=format&fit=crop&w=900&q=80')">
+
+<div class="destination-info">
+
+<h3>Yercaud</h3>
+<p>Beautiful Hills</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section>
+
+<div class="container">
+
+<div class="title">
+
+<h2>Why Travel With Us?</h2>
+
+<p>Comfortable journeys. Happy memories.</p>
+
+</div>
+
+
+<div class="features">
+
+<div class="feature">
+
+<div class="feature-icon">🚌</div>
+
+<h3>Premium Buses</h3>
+
+<p>
+Clean and comfortable tourist buses.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">👨‍✈️</div>
+
+<h3>Experienced Drivers</h3>
+
+<p>
+Professional drivers for safe travel.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">💰</div>
+
+<h3>Affordable</h3>
+
+<p>
+Group-friendly travel packages.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">📍</div>
+
+<h3>Flexible Pickup</h3>
+
+<p>
+Convenient pickup locations.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">❤️</div>
+
+<h3>Family Friendly</h3>
+
+<p>
+Perfect for family and friends.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">📞</div>
+
+<h3>24/7 Support</h3>
+
+<p>
+We're always ready to help.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BOOKING -->
+
+<section class="booking-section" id="booking">
+
+<div class="container">
+
+<div class="title">
+
+<h2>Book Your Bus</h2>
+
+<p>
+Select your bus and send your trip details
+</p>
+
+</div>
+
+
+<div class="booking-box">
+
+<div class="selected" id="selectedBus">
+
+🚌 Please select a bus above
+
+</div>
+
+
+<input
+type="text"
+id="name"
+placeholder="Your Name">
+
+
+<input
+type="tel"
+id="phone"
+placeholder="Mobile Number">
+
+
+<select id="destination">
+
+<option value="">
+Select Destination
+</option>
+
+<option>Ooty</option>
+<option>Kodaikanal</option>
+<option>Yercaud</option>
+<option>Kanyakumari</option>
+<option>Rameswaram</option>
+<option>Madurai</option>
+<option>Thanjavur</option>
+<option>Trichy</option>
+
+</select>
+
+
+<input
+type="date"
+id="date">
+
+
+<select id="persons">
+
+<option>10 Persons</option>
+<option>20 Persons</option>
+<option>30 Persons</option>
+<option>40 Persons</option>
+<option>50 Persons</option>
+
+</select>
+
+
+<input
+type="text"
+id="pickup"
+placeholder="Pickup Location">
+
+
+<textarea
+id="message"
+placeholder="Any extra requirements?">
+</textarea>
+
+
+<button
+class="btn whatsapp"
+onclick="sendBooking()">
+
+📲 SEND BOOKING TO WHATSAPP
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="title">
+
+<h2>Contact PAK PMS</h2>
+
+<p>Hanumanthirtham</p>
+
+</div>
+
+<div class="phone">
+93804 78499
+</div>
+
+    
+href="tel:9380478499"
+class="btn">
+
+📞 CALL NOW
+
+</a>
+
+<a
+href="https://wa.me/919380478499"
+target="_blank"
+class="btn btn-outline">
+
+💬 WHATSAPP
+
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>
+© 2026 <strong>PAK PMS Tours & Travels</strong>
+</p>
+
+<p style="margin-top:8px">
+Explore Tamil Nadu • Travel Together • Create Memories
+</p>
+
+</footer>
+
+
+<script>
+
+let selectedBus = "";
+
+
+/* SELECT BUS */
+
+function chooseBus(bus){
+
+    selectedBus = bus;
+
+    document.getElementById("selectedBus").innerHTML =
+        "🚌 Selected Bus: <b>" + bus + "</b>";
+
+    document.getElementById("booking")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+}
+
+
+/* WHATSAPP BOOKING */
+
+function sendBooking(){
+
+    if(selectedBus === ""){
+
+        alert("Please select a bus first!");
+
+        return;
+    }
+
+
+    let name =
+        document.getElementById("name").value;
+
+    let phone =
+        document.getElementById("phone").value;
+
+    let destination =
+        document.getElementById("destination").value;
+
+    let date =
+        document.getElementById("date").value;
+
+    let persons =
+        document.getElementById("persons").value;
+
+    let pickup =
+        document.getElementById("pickup").value;
+
+    let message =
+        document.getElementById("message").value;
+
+
+    if(
+        name === "" ||
+        phone === "" ||
+        destination === "" ||
+        date === ""
+    ){
+
+        alert(
+            "Please fill Name, Phone, Destination and Date."
+        );
+
+        return;
+    }
+
+
+    let text =
+        "🚌 PAK PMS TOURS & TRAVELS%0A%0A" +
+
+        "🚌 Bus: " + selectedBus + "%0A" +
+
+        "👤 Name: " + name + "%0A" +
+
+        "📞 Phone: " + phone + "%0A" +
+
+        "📍 Destination: " + destination + "%0A" +
+
+        "📅 Date: " + date + "%0A" +
+
+        "👨‍👩‍👧 Persons: " + persons + "%0A" +
+
+        "📌 Pickup: " + pickup + "%0A" +
+
+        "📝 Requirements: " + message;
+
+
+    window.open(
+        "https://wa.me/919380478499?text=" + text,
+        "_blank"
+    );
+
+}
+
+</script>
+
+</body>
+</html>
