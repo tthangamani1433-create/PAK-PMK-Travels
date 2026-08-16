@@ -1,0 +1,89 @@
+/* =========================
+   BOOKING CONFIRMATION
+========================= */
+
+.confirmation{
+    display:none;
+    max-width:700px;
+    margin:30px auto 0;
+    padding:30px;
+    background:#101010;
+    border:1px solid #20c76a;
+    border-radius:22px;
+    text-align:left;
+    box-shadow:0 15px 50px #000;
+}
+
+.confirmation.show{
+    display:block;
+    animation:confirmIn .5s ease;
+}
+
+@keyframes confirmIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.confirmation h3{
+    text-align:center;
+    color:#20c76a;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.booking-id{
+    text-align:center;
+    background:#181818;
+    border:1px solid #f5c542;
+    color:#f5c542;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:20px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.confirm-details{
+    background:#181818;
+    padding:20px;
+    border-radius:15px;
+    line-height:1.9;
+    color:#ddd;
+}
+
+.confirm-details strong{
+    color:#f5c542;
+}
+
+.confirm-buttons{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+}
+
+.confirm-buttons button{
+    flex:1;
+}
+
+.new-booking{
+    background:#f5c542;
+    color:#000;
+}
+
+@media(max-width:600px){
+
+    .confirmation{
+        padding:20px;
+    }
+
+    .confirm-buttons{
+        flex-direction:column;
+    }
+
+}
