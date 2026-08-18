@@ -10,12 +10,11 @@ content="width=device-width, initial-scale=1.0">
 
 <title>PAK PMS Tours & Travels</title>
 
-
 <style>
 
-/* =========================
+/* =====================================================
    RESET
-========================= */
+===================================================== */
 
 *{
     margin:0;
@@ -34,9 +33,9 @@ body{
 }
 
 
-/* =========================
+/* =====================================================
    NAVBAR
-========================= */
+===================================================== */
 
 nav{
     position:fixed;
@@ -45,8 +44,7 @@ nav{
     width:100%;
     z-index:1000;
 
-    background:rgba(0,0,0,.85);
-
+    background:rgba(0,0,0,.88);
     backdrop-filter:blur(15px);
 
     border-bottom:1px solid #d9ad3c44;
@@ -86,9 +84,9 @@ nav a:hover{
 }
 
 
-/* =========================
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero{
     min-height:100vh;
@@ -117,7 +115,6 @@ nav a:hover{
     content:"";
 
     position:absolute;
-
     inset:0;
 
     background:
@@ -129,7 +126,6 @@ nav a:hover{
 
 .hero-content{
     position:relative;
-
     z-index:2;
 
     max-width:900px;
@@ -140,7 +136,7 @@ nav a:hover{
 .hero small{
     color:#f5c542;
 
-    font-size:16px;
+    font-size:15px;
 
     letter-spacing:5px;
 }
@@ -168,9 +164,9 @@ nav a:hover{
 }
 
 
-/* =========================
+/* =====================================================
    BUTTON
-========================= */
+===================================================== */
 
 .btn{
     display:inline-block;
@@ -212,9 +208,9 @@ nav a:hover{
 }
 
 
-/* =========================
+/* =====================================================
    COMMON
-========================= */
+===================================================== */
 
 section{
     padding:90px 20px;
@@ -222,32 +218,28 @@ section{
 
 .container{
     max-width:1150px;
-
     margin:auto;
 }
 
 .title{
     text-align:center;
-
     margin-bottom:50px;
 }
 
 .title h2{
     color:#f5c542;
-
     font-size:42px;
 }
 
 .title p{
     color:#888;
-
     margin-top:10px;
 }
 
 
-/* =========================
+/* =====================================================
    BUS SECTION
-========================= */
+===================================================== */
 
 .bus-grid{
     display:grid;
@@ -289,7 +281,6 @@ section{
 
 .bus-photo img{
     width:100%;
-
     height:100%;
 
     object-fit:cover;
@@ -324,7 +315,6 @@ section{
 
 .bus-info h3{
     color:#f5c542;
-
     font-size:22px;
 }
 
@@ -338,7 +328,6 @@ section{
 
 .tags{
     display:flex;
-
     flex-wrap:wrap;
 
     gap:7px;
@@ -359,9 +348,9 @@ section{
 }
 
 
-/* =========================
+/* =====================================================
    DESTINATIONS
-========================= */
+===================================================== */
 
 .destination-grid{
     display:grid;
@@ -412,26 +401,23 @@ section{
     z-index:2;
 
     bottom:20px;
-
     left:20px;
 }
 
 .destination-info h3{
     color:#f5c542;
-
     font-size:25px;
 }
 
 .destination-info p{
     color:#ddd;
-
     margin-top:5px;
 }
 
 
-/* =========================
+/* =====================================================
    FEATURES
-========================= */
+===================================================== */
 
 .features{
     display:grid;
@@ -481,9 +467,9 @@ section{
 }
 
 
-/* =========================
-   BOOKING
-========================= */
+/* =====================================================
+   BOOKING SECTION
+===================================================== */
 
 .booking-section{
     background:
@@ -508,7 +494,201 @@ section{
     border-radius:25px;
 }
 
+
+/* SELECTED BUS */
+
 .selected{
+    background:#181818;
+
+    border:1px solid #f5c542;
+
+    color:#f5c542;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    margin-bottom:25px;
+
+    text-align:center;
+}
+
+.selected small{
+    display:block;
+
+    color:#888;
+
+    font-size:11px;
+
+    margin-top:5px;
+}
+
+
+/* FORM LABEL */
+
+.booking-box label{
+    display:block;
+
+    color:#f5c542;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    margin:8px 0 6px;
+}
+
+.booking-box label small{
+    display:block;
+
+    color:#777;
+
+    font-size:11px;
+
+    font-weight:normal;
+
+    margin-top:3px;
+}
+
+
+/* INPUTS */
+
+.booking-box input,
+.booking-box select,
+.booking-box textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:15px;
+
+    background:#191919;
+
+    border:1px solid #333;
+
+    color:#fff;
+
+    border-radius:11px;
+
+    outline:none;
+
+    font-size:15px;
+}
+
+.booking-box input:focus,
+.booking-box select:focus,
+.booking-box textarea:focus{
+
+    border-color:#f5c542;
+
+    box-shadow:
+    0 0 10px #f5c54222;
+}
+
+.booking-box textarea{
+
+    height:110px;
+
+    resize:none;
+}
+
+.booking-box option{
+    background:#191919;
+    color:#fff;
+}
+
+
+/* WHATSAPP BUTTON */
+
+.whatsapp{
+    width:100%;
+
+    background:#20c76a;
+
+    color:#fff;
+
+    margin-top:5px;
+}
+
+.whatsapp:hover{
+    background:#18b85e;
+}
+
+.whatsapp small{
+    display:block;
+
+    color:#dfffe9;
+
+    font-size:11px;
+
+    margin-top:5px;
+}
+
+
+/* =====================================================
+   BOOKING CONFIRMATION
+===================================================== */
+
+.confirmation{
+
+    display:none;
+
+    max-width:700px;
+
+    margin:30px auto 0;
+
+    padding:30px;
+
+    background:#101010;
+
+    border:1px solid #20c76a;
+
+    border-radius:22px;
+
+    text-align:left;
+
+    box-shadow:
+    0 15px 50px #000;
+}
+
+.confirmation.show{
+
+    display:block;
+
+    animation:
+    confirmIn .5s ease;
+}
+
+@keyframes confirmIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.confirmation h3{
+
+    text-align:center;
+
+    color:#20c76a;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+}
+
+.booking-id{
+
+    text-align:center;
+
     background:#181818;
 
     border:1px solid #f5c542;
@@ -521,57 +701,52 @@ section{
 
     margin-bottom:20px;
 
-    text-align:center;
+    font-size:20px;
+
+    font-weight:bold;
 }
 
-.booking-box input,
-.booking-box select,
-.booking-box textarea{
+.confirm-details{
 
-    width:100%;
+    background:#181818;
 
-    padding:15px;
+    padding:20px;
 
-    margin-bottom:13px;
+    border-radius:15px;
 
-    background:#191919;
+    line-height:1.9;
 
-    border:1px solid #333;
-
-    color:white;
-
-    border-radius:11px;
-
-    outline:none;
+    color:#ddd;
 }
 
-.booking-box input:focus,
-.booking-box select:focus,
-.booking-box textarea:focus{
-
-    border-color:#f5c542;
+.confirm-details strong{
+    color:#f5c542;
 }
 
-.booking-box textarea{
+.confirm-buttons{
 
-    height:100px;
+    display:flex;
 
-    resize:none;
+    gap:10px;
+
+    margin-top:20px;
 }
 
-.whatsapp{
+.confirm-buttons button{
+    flex:1;
+}
 
-    width:100%;
+.new-booking{
 
-    background:#20c76a;
+    background:#f5c542;
 
-    color:#fff;
+    color:#000;
 }
 
 
-/* =========================
+/* =====================================================
    CONTACT
-========================= */
+===================================================== */
 
 .contact{
     text-align:center;
@@ -580,7 +755,9 @@ section{
 }
 
 .phone{
-    font-size:clamp(30px,7vw,60px);
+
+    font-size:
+    clamp(30px,7vw,60px);
 
     color:#f5c542;
 
@@ -590,11 +767,12 @@ section{
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer{
+
     text-align:center;
 
     padding:30px;
@@ -609,9 +787,9 @@ footer strong{
 }
 
 
-/* =========================
+/* =====================================================
    MOBILE
-========================= */
+===================================================== */
 
 @media(max-width:800px){
 
@@ -646,6 +824,14 @@ footer strong{
         font-size:32px;
     }
 
+    .confirmation{
+        padding:20px;
+    }
+
+    .confirm-buttons{
+        flex-direction:column;
+    }
+
 }
 
 </style>
@@ -656,9 +842,9 @@ footer strong{
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      NAVBAR
-========================= -->
+===================================================== -->
 
 <nav>
 
@@ -689,9 +875,9 @@ PAK PMS <span>TOURS</span>
 </nav>
 
 
-<!-- =========================
+<!-- =====================================================
      HERO
-========================= -->
+===================================================== -->
 
 <section
 class="hero"
@@ -737,9 +923,9 @@ BOOK YOUR TRIP
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      BUSES
-========================= -->
+===================================================== -->
 
 <section id="buses">
 
@@ -752,8 +938,7 @@ Our Tourist Buses
 </h2>
 
 <p>
-Choose your favourite bus
-and book your trip
+Choose your favourite bus and book your trip
 </p>
 
 </div>
@@ -937,9 +1122,9 @@ BOOK THIS BUS
 </section>
 
 
-<!-- =========================
-     PLACES
-========================= -->
+<!-- =====================================================
+     DESTINATIONS
+===================================================== -->
 
 <section id="places">
 
@@ -969,9 +1154,7 @@ style="background-image:url('https://images.unsplash.com/photo-1593693411515-c20
 
 <h3>Ooty</h3>
 
-<p>
-Queen of Hills
-</p>
+<p>Queen of Hills • மலைகளின் ராணி</p>
 
 </div>
 
@@ -986,9 +1169,7 @@ style="background-image:url('https://images.unsplash.com/photo-1595815771614-ade
 
 <h3>Kodaikanal</h3>
 
-<p>
-Princess of Hills
-</p>
+<p>Princess of Hills • மலைகளின் இளவரசி</p>
 
 </div>
 
@@ -1003,9 +1184,7 @@ style="background-image:url('https://images.unsplash.com/photo-1602216056096-3b4
 
 <h3>Kanyakumari</h3>
 
-<p>
-Three Seas Meet
-</p>
+<p>Three Seas Meet • மூன்று கடல்கள் சந்திக்கும் இடம்</p>
 
 </div>
 
@@ -1020,9 +1199,7 @@ style="background-image:url('https://images.unsplash.com/photo-1582510003544-4d0
 
 <h3>Madurai</h3>
 
-<p>
-Temple City
-</p>
+<p>Temple City • கோவில் நகரம்</p>
 
 </div>
 
@@ -1037,9 +1214,7 @@ style="background-image:url('https://images.unsplash.com/photo-1600100397608-f01
 
 <h3>Rameswaram</h3>
 
-<p>
-Temple & Beach
-</p>
+<p>Temple & Beach • கோவில் மற்றும் கடற்கரை</p>
 
 </div>
 
@@ -1054,9 +1229,7 @@ style="background-image:url('https://images.unsplash.com/photo-1623668637901-9e3
 
 <h3>Yercaud</h3>
 
-<p>
-Beautiful Hills
-</p>
+<p>Beautiful Hills • அழகிய மலைப்பகுதி</p>
 
 </div>
 
@@ -1070,9 +1243,9 @@ Beautiful Hills
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      FEATURES
-========================= -->
+===================================================== -->
 
 <section>
 
@@ -1085,8 +1258,7 @@ Why Travel With Us?
 </h2>
 
 <p>
-Comfortable journeys.
-Happy memories.
+Comfortable journeys • Happy memories
 </p>
 
 </div>
@@ -1106,8 +1278,9 @@ Premium Buses
 </h3>
 
 <p>
-Clean and comfortable
-tourist buses.
+Clean and comfortable tourist buses.
+<br>
+சுத்தமான மற்றும் வசதியான சுற்றுலா பேருந்துகள்.
 </p>
 
 </div>
@@ -1124,8 +1297,9 @@ Experienced Drivers
 </h3>
 
 <p>
-Professional drivers
-for safe travel.
+Professional drivers for safe travel.
+<br>
+பாதுகாப்பான பயணத்திற்கு அனுபவமுள்ள ஓட்டுநர்கள்.
 </p>
 
 </div>
@@ -1142,8 +1316,9 @@ Affordable
 </h3>
 
 <p>
-Group-friendly travel
-packages.
+Group-friendly travel packages.
+<br>
+குழு பயணத்திற்கு ஏற்ற கட்டணங்கள்.
 </p>
 
 </div>
@@ -1160,8 +1335,9 @@ Flexible Pickup
 </h3>
 
 <p>
-Convenient pickup
-locations.
+Convenient pickup locations.
+<br>
+வசதியான ஏறும் இடங்கள்.
 </p>
 
 </div>
@@ -1178,8 +1354,9 @@ Family Friendly
 </h3>
 
 <p>
-Perfect for family
-and friends.
+Perfect for family and friends.
+<br>
+குடும்பம் மற்றும் நண்பர்களுக்கு சிறந்தது.
 </p>
 
 </div>
@@ -1196,8 +1373,9 @@ and friends.
 </h3>
 
 <p>
-We're always ready
-to help.
+We're always ready to help.
+<br>
+எப்போதும் உதவ தயாராக இருக்கிறோம்.
 </p>
 
 </div>
@@ -1210,9 +1388,9 @@ to help.
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      BOOKING
-========================= -->
+===================================================== -->
 
 <section
 class="booking-section"
@@ -1227,8 +1405,9 @@ Book Your Bus
 </h2>
 
 <p>
-Select your bus and send
-your trip details
+Select your bus and send your trip details
+<br>
+உங்கள் பேருந்தை தேர்வு செய்து பயண விவரங்களை அனுப்புங்கள்
 </p>
 
 </div>
@@ -1237,93 +1416,201 @@ your trip details
 <div class="booking-box">
 
 
+<!-- SELECTED BUS -->
+
 <div
 class="selected"
 id="selectedBus">
 
 🚌 Please select a bus above
 
+<small>
+மேலே ஒரு பேருந்தை தேர்வு செய்யவும்
+</small>
+
 </div>
 
+
+<!-- NAME -->
+
+<label>
+
+Your Name
+
+<small>
+உங்கள் பெயர்
+</small>
+
+</label>
 
 <input
 type="text"
 id="name"
-placeholder="Your Name">
+placeholder="Enter your name">
 
+
+<!-- PHONE -->
+
+<label>
+
+Mobile Number
+
+<small>
+கைபேசி எண்
+</small>
+
+</label>
 
 <input
 type="tel"
 id="phone"
-placeholder="Mobile Number"
+placeholder="Enter 10 digit mobile number"
 maxlength="10">
 
+
+<!-- DESTINATION -->
+
+<label>
+
+Select Destination
+
+<small>
+செல்லும் இடத்தை தேர்வு செய்யவும்
+</small>
+
+</label>
 
 <select id="destination">
 
 <option value="">
-Select Destination
+Select Destination • செல்லும் இடத்தை தேர்வு செய்யவும்
 </option>
 
-<option>Ooty</option>
+<option value="Ooty">
+Ooty • ஊட்டி
+</option>
 
-<option>Kodaikanal</option>
+<option value="Kodaikanal">
+Kodaikanal • கொடைக்கானல்
+</option>
 
-<option>Yercaud</option>
+<option value="Yercaud">
+Yercaud • ஏற்காடு
+</option>
 
-<option>Kanyakumari</option>
+<option value="Kanyakumari">
+Kanyakumari • கன்னியாகுமரி
+</option>
 
-<option>Rameswaram</option>
+<option value="Rameswaram">
+Rameswaram • ராமேஸ்வரம்
+</option>
 
-<option>Madurai</option>
+<option value="Madurai">
+Madurai • மதுரை
+</option>
 
-<option>Thanjavur</option>
+<option value="Thanjavur">
+Thanjavur • தஞ்சாவூர்
+</option>
 
-<option>Trichy</option>
+<option value="Trichy">
+Trichy • திருச்சி
+</option>
 
 </select>
 
+
+<!-- DATE -->
+
+<label>
+
+Travel Date
+
+<small>
+பயண தேதி
+</small>
+
+</label>
 
 <input
 type="date"
 id="date">
 
 
+<!-- PERSONS -->
+
+<label>
+
+Number of Persons
+
+<small>
+பயணிகள் எண்ணிக்கை
+</small>
+
+</label>
+
 <select id="persons">
 
 <option value="10 Persons">
-10 Persons
+10 Persons • 10 நபர்கள்
 </option>
 
 <option value="20 Persons">
-20 Persons
+20 Persons • 20 நபர்கள்
 </option>
 
 <option value="30 Persons">
-30 Persons
+30 Persons • 30 நபர்கள்
 </option>
 
 <option value="40 Persons">
-40 Persons
+40 Persons • 40 நபர்கள்
 </option>
 
 <option value="50 Persons">
-50 Persons
+50 Persons • 50 நபர்கள்
 </option>
 
 </select>
 
 
+<!-- PICKUP -->
+
+<label>
+
+Pickup Location
+
+<small>
+ஏறும் இடம்
+</small>
+
+</label>
+
 <input
 type="text"
 id="pickup"
-placeholder="Pickup Location">
+placeholder="Enter pickup location">
 
+
+<!-- EXTRA -->
+
+<label>
+
+Any Extra Requirements?
+
+<small>
+கூடுதல் தேவைகள் ஏதேனும் உள்ளதா?
+</small>
+
+</label>
 
 <textarea
 id="message"
-placeholder="Any extra requirements?"></textarea>
+placeholder="Enter your requirements"></textarea>
 
+
+<!-- SEND -->
 
 <button
 type="button"
@@ -1332,6 +1619,102 @@ onclick="sendBooking()">
 
 📲 SEND BOOKING TO WHATSAPP
 
+<small>
+WhatsApp-க்கு முன்பதிவு விவரங்களை அனுப்பவும்
+</small>
+
+</button>
+
+
+</div>
+
+
+<!-- =====================================================
+     CONFIRMATION
+===================================================== -->
+
+<div
+class="confirmation"
+id="confirmation">
+
+<h3>
+✅ Booking Request Sent
+</h3>
+
+
+<div class="booking-id">
+
+🎫 Booking ID:
+
+<span id="confirmBookingID">
+</span>
+
+</div>
+
+
+<div class="confirm-details">
+
+🚌 <strong>Bus:</strong>
+<span id="confirmBus"></span>
+
+<br>
+
+👤 <strong>Name:</strong>
+<span id="confirmName"></span>
+
+<br>
+
+📞 <strong>Mobile:</strong>
+<span id="confirmPhone"></span>
+
+<br>
+
+📍 <strong>Destination:</strong>
+<span id="confirmDestination"></span>
+
+<br>
+
+📅 <strong>Travel Date:</strong>
+<span id="confirmDate"></span>
+
+<br>
+
+👨‍👩‍👧 <strong>Persons:</strong>
+<span id="confirmPersons"></span>
+
+<br>
+
+🚏 <strong>Pickup:</strong>
+<span id="confirmPickup"></span>
+
+<br>
+
+📝 <strong>Requirements:</strong>
+<span id="confirmMessage"></span>
+
+</div>
+
+
+<div class="confirm-buttons">
+
+
+<button
+type="button"
+class="btn whatsapp"
+id="openWhatsapp">
+
+📲 Open WhatsApp
+
+</button>
+
+
+<button
+type="button"
+class="btn new-booking"
+onclick="newBooking()">
+
+🔄 New Booking
+
 </button>
 
 
@@ -1339,12 +1722,15 @@ onclick="sendBooking()">
 
 </div>
 
+
+</div>
+
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      CONTACT
-========================= -->
+===================================================== -->
 
 <section
 class="contact"
@@ -1359,7 +1745,7 @@ Contact PAK PMS
 </h2>
 
 <p>
-Hanumanthirtham
+Hanumanthirtham • ஹனுமந்தீர்த்தம்
 </p>
 
 </div>
@@ -1394,17 +1780,20 @@ class="btn btn-outline">
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
 <p>
+
 © 2026
+
 <strong>
 PAK PMS Tours & Travels
 </strong>
+
 </p>
 
 <p style="margin-top:8px">
@@ -1418,71 +1807,81 @@ Create Memories
 </footer>
 
 
-<!-- =========================
+<!-- =====================================================
      JAVASCRIPT
-========================= -->
+===================================================== -->
 
 <script>
 
 let selectedBus = "";
 
+let currentWhatsAppURL = "";
 
-/* =========================
+
+/* =====================================================
    SELECT BUS
-========================= */
+===================================================== */
 
-function chooseBus(bus) {
+function chooseBus(bus){
 
     selectedBus = bus;
 
-    const selected =
-        document.getElementById("selectedBus");
 
-    if (selected) {
+    const selected =
+        document.getElementById(
+            "selectedBus"
+        );
+
+
+    if(selected){
 
         selected.innerHTML =
-            "🚌 Selected Bus: <b>" +
-            bus +
-            "</b>";
+
+        "🚌 Selected Bus: <b>" +
+        bus +
+        "</b>" +
+
+        "<small>" +
+        "தேர்வு செய்யப்பட்ட பேருந்து" +
+        "</small>";
 
     }
 
 
-    const booking =
-        document.getElementById("booking");
+    document
+    .getElementById("booking")
+    .scrollIntoView({
 
-    if (booking) {
+        behavior:"smooth",
 
-        booking.scrollIntoView({
-            behavior:"smooth",
-            block:"start"
-        });
+        block:"start"
 
-    }
+    });
 
 }
 
 
-/* =========================
-   WHATSAPP BOOKING
-========================= */
+/* =====================================================
+   SEND BOOKING
+===================================================== */
 
-function sendBooking() {
+function sendBooking(){
 
 
     /* CHECK BUS */
 
-    if (selectedBus === "") {
+    if(selectedBus === ""){
 
         alert(
-            "🚌 Please select a bus first!"
+            "🚌 Please select a bus first!\n" +
+            "முதலில் ஒரு பேருந்தை தேர்வு செய்யவும்!"
         );
 
         return;
     }
 
 
-    /* GET FORM DATA */
+    /* GET DATA */
 
     const name =
         document
@@ -1532,28 +1931,32 @@ function sendBooking() {
 
     /* VALIDATION */
 
-    if (
+    if(
         !name ||
         !phone ||
         !destination ||
         !date ||
         !pickup
-    ) {
+    ){
 
         alert(
-            "⚠️ Please fill Name, Phone, Destination, Date and Pickup Location."
+            "⚠️ Please fill all required details.\n" +
+            "தேவையான அனைத்து விவரங்களையும் நிரப்பவும்."
         );
 
         return;
     }
 
 
-    /* PHONE VALIDATION */
+    /* PHONE */
 
-    if (phone.length !== 10) {
+    if(
+        phone.length !== 10
+    ){
 
         alert(
-            "📞 Please enter a valid 10 digit mobile number."
+            "📞 Enter a valid 10 digit mobile number.\n" +
+            "சரியான 10 இலக்க கைபேசி எண்ணை உள்ளிடவும்."
         );
 
         return;
@@ -1563,16 +1966,66 @@ function sendBooking() {
     /* BOOKING ID */
 
     const bookingID =
+
         "PAK-" +
-        new Date().getFullYear() +
+
+        new Date()
+        .getFullYear() +
+
         "-" +
+
         Math.floor(
             1000 +
             Math.random() * 9000
         );
 
 
-    /* WHATSAPP MESSAGE */
+    /* =================================================
+       SAVE BOOKING
+    ================================================= */
+
+    const bookingData = {
+
+        bookingID:bookingID,
+
+        bus:selectedBus,
+
+        name:name,
+
+        phone:phone,
+
+        destination:destination,
+
+        date:date,
+
+        persons:persons,
+
+        pickup:pickup,
+
+        message:
+            message || "None",
+
+        createdAt:
+            new Date()
+            .toLocaleString()
+
+    };
+
+
+    localStorage.setItem(
+
+        "PAK_PMS_Last_Booking",
+
+        JSON.stringify(
+            bookingData
+        )
+
+    );
+
+
+    /* =================================================
+       WHATSAPP
+    ================================================= */
 
     const whatsappMessage =
 
@@ -1629,48 +2082,277 @@ ${message || "None"}
 Thank you! 🙏`;
 
 
-    /* WHATSAPP NUMBER */
-
     const whatsappNumber =
         "919380478499";
 
 
-    /* WHATSAPP URL */
+    currentWhatsAppURL =
 
-    const whatsappURL =
         "https://wa.me/" +
+
         whatsappNumber +
+
         "?text=" +
+
         encodeURIComponent(
             whatsappMessage
         );
 
 
+    /* =================================================
+       CONFIRMATION DATA
+    ================================================= */
+
+    document
+    .getElementById(
+        "confirmBookingID"
+    )
+    .textContent =
+        bookingID;
+
+
+    document
+    .getElementById(
+        "confirmBus"
+    )
+    .textContent =
+        selectedBus;
+
+
+    document
+    .getElementById(
+        "confirmName"
+    )
+    .textContent =
+        name;
+
+
+    document
+    .getElementById(
+        "confirmPhone"
+    )
+    .textContent =
+        phone;
+
+
+    document
+    .getElementById(
+        "confirmDestination"
+    )
+    .textContent =
+        destination;
+
+
+    document
+    .getElementById(
+        "confirmDate"
+    )
+    .textContent =
+        date;
+
+
+    document
+    .getElementById(
+        "confirmPersons"
+    )
+    .textContent =
+        persons;
+
+
+    document
+    .getElementById(
+        "confirmPickup"
+    )
+    .textContent =
+        pickup;
+
+
+    document
+    .getElementById(
+        "confirmMessage"
+    )
+    .textContent =
+        message || "None";
+
+
+    /* SHOW */
+
+    const confirmation =
+        document.getElementById(
+            "confirmation"
+        );
+
+
+    confirmation.classList.add(
+        "show"
+    );
+
+
+    /* SCROLL */
+
+    setTimeout(
+        function(){
+
+            confirmation.scrollIntoView({
+
+                behavior:"smooth",
+
+                block:"center"
+
+            });
+
+        },
+        300
+    );
+
+
     /* OPEN WHATSAPP */
 
     window.open(
-        whatsappURL,
+
+        currentWhatsAppURL,
+
         "_blank"
+
     );
 
 }
 
 
-/* =========================
-   DATE
-========================= */
+/* =====================================================
+   OPEN WHATSAPP AGAIN
+===================================================== */
+
+document
+.getElementById(
+    "openWhatsapp"
+)
+.addEventListener(
+    "click",
+    function(){
+
+        if(
+            currentWhatsAppURL
+        ){
+
+            window.open(
+
+                currentWhatsAppURL,
+
+                "_blank"
+
+            );
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   NEW BOOKING
+===================================================== */
+
+function newBooking(){
+
+    selectedBus = "";
+
+    currentWhatsAppURL = "";
+
+
+    document
+    .getElementById(
+        "selectedBus"
+    )
+    .innerHTML =
+
+    "🚌 Please select a bus above" +
+
+    "<small>" +
+    "மேலே ஒரு பேருந்தை தேர்வு செய்யவும்" +
+    "</small>";
+
+
+    document
+    .getElementById("name")
+    .value = "";
+
+
+    document
+    .getElementById("phone")
+    .value = "";
+
+
+    document
+    .getElementById("destination")
+    .value = "";
+
+
+    document
+    .getElementById("date")
+    .value = "";
+
+
+    document
+    .getElementById("persons")
+    .value =
+        "10 Persons";
+
+
+    document
+    .getElementById("pickup")
+    .value = "";
+
+
+    document
+    .getElementById("message")
+    .value = "";
+
+
+    document
+    .getElementById(
+        "confirmation"
+    )
+    .classList.remove(
+        "show"
+    );
+
+
+    document
+    .getElementById("buses")
+    .scrollIntoView({
+
+        behavior:"smooth"
+
+    });
+
+}
+
+
+/* =====================================================
+   PAGE LOAD
+===================================================== */
 
 document.addEventListener(
+
     "DOMContentLoaded",
-    function () {
+
+    function(){
+
+
+        /* DATE */
 
         const dateInput =
-            document.getElementById("date");
+            document
+            .getElementById(
+                "date"
+            );
 
 
-        if (dateInput) {
+        if(dateInput){
 
             const today =
+
                 new Date()
                 .toISOString()
                 .split("T")[0];
@@ -1682,21 +2364,25 @@ document.addEventListener(
         }
 
 
-        /* =====================
-           PHONE INPUT
-        ===================== */
+        /* PHONE */
 
         const phoneInput =
-            document.getElementById("phone");
+            document
+            .getElementById(
+                "phone"
+            );
 
 
-        if (phoneInput) {
+        if(phoneInput){
 
             phoneInput.addEventListener(
+
                 "input",
-                function () {
+
+                function(){
 
                     this.value =
+
                         this.value
                         .replace(
                             /[^0-9]/g,
@@ -1708,11 +2394,13 @@ document.addEventListener(
                         );
 
                 }
+
             );
 
         }
 
     }
+
 );
 
 </script>
